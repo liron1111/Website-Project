@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/944eb371a4.js"></script>
 </head>
 <body>
-    
+
     <section id="main">
 
         <nav>
@@ -26,7 +26,7 @@
         <article>
 
             <h1>learn to code <br/><span class="text-gradient">better.</span></h1>
-            <h3> LearningFire is a <span class="text-gradient">very-friendly</span> and <span class="text-gradient">highly-amusing</span> way <br/> to level up your programming skills.</h3>
+            <h3> LearningFire is a <span class="text-gradient">very-friendly</span> && <span class="text-gradient">highly-amusing</span> way <br/> to level up your programming skills.</h3>
         
         </article>
 
@@ -35,5 +35,10 @@
         </aside>
     
     </section>
+    <div id="ghost"><i class="fa-solid fa-ghost"></i></div>
+    
+
+    <script src="JavaScript1.js"></script>
+
 </body>
 </html>

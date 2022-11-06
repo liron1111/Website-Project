@@ -113,7 +113,8 @@ nav {
 #main > article > h1 {
     text-transform: uppercase;
     color: ghostwhite;
-    font-size: 40px;
+    font-size: 45px;
+    font-weight: bold;
 }
 
 #main > article > h1 > .text-gradient {
@@ -134,7 +135,6 @@ nav {
 }
 
 
-
 #main > aside > #arrow {
     position: absolute;
     width: 20vw;
@@ -143,4 +143,14 @@ nav {
     left: 52vw;
     background-image: linear-gradient(to bottom, #FFD200, #F7971E, #ff6a00);
     clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+
+#ghost {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: white;
+    font-size: 3vw;
+    aspect-ratio: 1;
 }

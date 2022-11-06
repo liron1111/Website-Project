@@ -1,0 +1,146 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Fredoka&display=swap');
+
+body {
+    background: linear-gradient(to top, rgb(33, 33, 50) 10%, rgb(23, 22, 32) 70%);
+    margin: 0;
+    font-family: 'Fredoka';
+}
+
+
+section {
+    height: 100vh;
+}
+
+
+.text-gradient {
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+button:hover {
+    cursor: pointer;    
+}
+
+
+#main {
+    position: relative;
+}
+
+
+
+nav {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    height: 15vh;
+    width: 94vw;
+    left: 3vw;
+}
+
+
+#home-button {
+    background: none;
+    border: none;
+    color: lightgrey;
+    font-size: 40px;
+    transition: color .1s;
+}
+
+#home-button:hover {
+    color: azure;
+}
+
+
+#login-button {
+    border: none;
+    background-color: white;
+    padding: 15px 15px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    box-shadow: 5px 5px 5px rgb(10, 10, 10);
+    transition: background .2s, color .1s;
+}
+
+#login-button:hover {
+    color: white;
+    background-color: mediumpurple;
+    box-shadow: 0 0 5px rgb(180, 180, 255);
+}
+
+
+#courses-button {
+    border: none;
+    color: dimgray;
+    transition: .3s;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+#courses-button:hover {
+    background-image: linear-gradient(to bottom, #ec6f66, #f3a183);
+    font-size: 16px;
+}
+
+
+#projects-button {
+    background: none;
+    border: none;
+    color: ghostwhite;
+    transition: .3s;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+#projects-button:hover {
+    font-size: 16px;
+    color: white;
+}
+
+
+
+#main > article {
+    position: absolute;
+    left: 5vw;
+    top: 25vh;
+    text-align: center;
+}
+
+#main > article > h1 {
+    text-transform: uppercase;
+    color: ghostwhite;
+    font-size: 40px;
+}
+
+#main > article > h1 > .text-gradient {
+    background-image: linear-gradient(to bottom, #FFBF2E, #FF9E28, #FE7C22);
+}
+
+#main > article > h3 {
+    color: rgb(200, 200, 210);
+    font-size: 20px;
+}
+
+#main > article > h3 > .text-gradient:first-child {
+    background-image: linear-gradient(to bottom, #ff9966, #ff5e62);
+}
+
+#main > article > h3 > .text-gradient:nth-child(2) {
+    background-image: linear-gradient(to bottom, #E100FF, #7F00FF);
+}
+
+
+
+#main > aside > #arrow {
+    position: absolute;
+    width: 20vw;
+    height: 100vh;
+    bottom: 0;
+    left: 52vw;
+    background-image: linear-gradient(to bottom, #FFD200, #F7971E, #ff6a00);
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}

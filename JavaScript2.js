@@ -1,16 +1,25 @@
 ﻿
 // elements
 const loginWindow = document.getElementById("login-window");
+const sections = document.getElementsByTagName("section");
 const ghost = document.getElementById("ghost");
 
 // open login window 
-function openLoginWindow() {
+function openLoginWindow() {    
     loginWindow.style.display = "block";
+
+    for (sectionIndex in sections) {
+        sections[sectionIndex].style.filter = "brightness(.1)";
+    }
 }
 
 // close login window
 function closeLoginWindow() {
     loginWindow.style.display = "none";
+
+    for (sectionIndex in sections) {
+        sections[sectionIndex].style.filter = "brightness(1)";
+    }
 }
 
 // animate cursor

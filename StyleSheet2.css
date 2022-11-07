@@ -1,7 +1,7 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Fredoka&display=swap');
 
 body {
-    background: linear-gradient(to top, rgb(33, 33, 50) 10%, rgb(23, 22, 32) 70%);
+    background: black;
     margin: 0;
     font-family: 'Fredoka';
 }
@@ -151,7 +151,7 @@ nav {
 
 #login-window {
     display: none;
-    background: linear-gradient(356deg, rgb(43, 40, 54) 8%, rgba(33, 32, 42) 71%);
+    background: linear-gradient(356deg, rgb(35, 35, 35) 60%, rgb(25, 25, 25) 8%);
     color: white;
     border: none;
     border-radius: 10px;
@@ -189,33 +189,33 @@ input {
 }
 
 label {
-    color: rgb(112, 112, 131);
-    margin: 5px;
+    color: whitesmoke;
+    margin: 7px 5px;
 }
 
 td {
-    padding: 10px 0;
+    padding: 8px 0;
 }
 
 
 .login-input {
-    background-color: rgb(53, 52, 72);
-    padding: 10px;
+    background-color: rgb(75, 75, 75);
+    padding: 5px;
     color: ghostwhite;
     font-size: 15px;
     font-family: inherit;
 }
 
-#email {
+.email {
     width: 90%;
-    padding: 10px;
-    border-bottom: 3px solid white;
+    padding: 7px;
+    border-bottom: 2px solid white;
 }
 
-#email:focus {
+.email:focus {
     border-bottom-color: dodgerblue;
 }
 
-#Uname, #password {
+.Uname, .password {
     padding: 5px;
 }

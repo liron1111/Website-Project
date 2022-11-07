@@ -43,32 +43,52 @@
         
         <h1 style="margin-left: 15px">Login</h1>
 
-        <form id="form" runat="server" autocomplete="off">
+        <form id="form1" runat="server" autocomplete="off">
             <table>
                 <tr>
                     <td>
                         <label>Name</label>
-                        <input type="text" id="Uname" name="Uname" class="login-input" spellcheck="false"/>
+                        <input type="text" name="Uname" class="Uname login-input" spellcheck="false" style="width: 100%"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Password</label>
+                        <input type="password" name="password" class="password login-input" spellcheck="false" style="width: 100%"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <h1>Sign In</h1>
+
+        <form id="form2" autocomplete="off">
+            <table>
+                <tr>
+                    <td>
+                        <label>Name</label>
+                        <input type="text" class="Uname login-input" name="Uname" spellcheck="false"/>
                     </td>
 
                     <td>
                         <label>Password</label>
-                        <input type="password" id="password" name="password" class="login-input" spellcheck="false"/>
+                        <input type="password" class="password login-input" name="password" spellcheck="false"/>
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2">
                         <label>Email</label>
-                        <input type="email" id="email" name="email" class="login-input" autocomplete="off"/>
+                        <input type="email" class="email login-input" name="email" autocomplete="off"/>
                     </td>
                 </tr>
             </table>
         </form>
-        
+
     </div>
 
     <div id="ghost"><i class="fa-solid fa-ghost"></i></div>
     
     <script src="JavaScript2.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,26 @@
+﻿body {
+    overflow-x: hidden;
+}
+
+
+/* text gradienct*/
+.text-gradient {
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* animation allows element to come out of screen*/
+@keyframes from-out-screen {
+    0% {
+        transform: translate(calc(100vw * calc(--slide-direction));
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}

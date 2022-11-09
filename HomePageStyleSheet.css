@@ -1,0 +1,252 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Fredoka&display=swap');
+
+html {
+    font-size: .3vmin;
+}
+
+body {
+    background: black;
+    margin: 0;
+    font-family: 'Fredoka';
+    scroll-behavior: smooth;
+}
+
+
+section {
+    height: 100vh;
+}
+
+
+button:hover {
+    cursor: pointer;
+}
+
+
+#main {
+    position: relative;
+}
+
+
+
+nav {
+    position: absolute;
+    align-items: center;
+    background: none;
+    margin-top: 3rem;
+    padding: 1rem;
+    height: 15vh;
+    width: 94vw;
+    left: 3vw;
+}
+
+
+#right-nav-side {
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    float: right;
+}
+
+
+#home-button {
+    background: none;
+    border: none;
+    color: lightgrey;
+    font-size: 25rem;
+    transition: color .1s;
+}
+
+#home-button:hover {
+        color: azure;
+    }
+
+
+#login-button {
+    border: none;
+    background-color: white;
+    padding: 10rem;
+    font-size: 10rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 1rem 1rem 1rem rgb(10, 10, 10);
+    transition: background .2s, color .1s;
+}
+
+#login-button:hover {
+        color: white;
+        background-color: mediumpurple;
+        box-shadow: 0 0 1rem rgb(180, 180, 255);
+    }
+
+
+#courses-button {
+    border: none;
+    color: dimgray;
+    font-size: 8rem;
+    font-weight: 900;
+}
+
+#courses-button:hover {
+    background-image: linear-gradient(to bottom, #ec6f66, #f3a183);
+}
+
+
+#projects-button {
+    background: none;
+    border: none;
+    color: ghostwhite;
+    transition: .3s;
+    font-size: 8rem;
+    font-weight: 900;
+}
+
+#projects-button:hover {
+    color: white;
+    text-shadow: 0 0 .8rem white;
+}
+
+
+
+#main > article {
+    position: absolute;
+    left: 5vw;
+    top: 20vh;
+    text-align: center;
+}
+
+#main > article > h1 {
+    text-transform: uppercase;
+    color: ghostwhite;
+    font-size: 28rem;
+    font-weight: bold;
+ }
+
+#main > article > h1 > .text-gradient {
+    background-image: linear-gradient(to bottom, #FFBF2E, #FF9E28, #FE7C22);
+}
+
+#main > article > h3 {
+    color: rgb(200, 200, 210);
+    font-size: 11rem;
+}
+
+#main > article > h3 > .text-gradient:first-child {
+    background-image: linear-gradient(to bottom, #ff9966, #ff5e62);
+}
+
+#main > article > h3 > .text-gradient:nth-child(2) {
+    background-image: linear-gradient(to bottom, #E100FF, #7F00FF);
+}
+
+
+#main > aside > #arrow {
+    position: absolute;
+    width: 17vw;
+    height: 100vh;
+    bottom: 0;
+    left: 52vw;
+    background-image: linear-gradient(to bottom, #FFD200, #F7971E, #ff6a00);
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+
+#ghost {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: white;
+    font-size: 3vw;
+    aspect-ratio: 1;
+}
+
+
+#login-window {
+    display: none;
+    background: linear-gradient(356deg, rgb(35, 35, 35) 70%, rgb(20, 20, 20) 8%);
+    color: white;
+    border: none;
+    border-radius: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    height: 75vh;
+    padding: 10rem;
+    transition: transform 1.3s;
+}
+
+#login-window > * {
+    display: inherit;
+}
+
+#esc-login-window {
+    float: right;
+    background: none;
+    border: .5rem solid white;
+    border-radius: 3rem;
+    font-size: 7rem;
+    font-weight: bold;
+    padding: 3.5rem;
+    margin: 5rem 7rem;
+    color: white;
+}
+
+#login-window > h1 {
+    font-size: 18rem;
+    margin-left: 5rem;
+}
+
+
+input {
+    margin-top: 3rem;
+    border: none;
+    outline: 0;
+}
+
+label {
+    color: whitesmoke;
+    margin: 5rem 3rem;
+    font-size: 8rem;
+}
+
+td {
+    padding: 5rem 0;
+}
+
+
+.login-input {
+    background-color: rgb(75, 75, 75);
+    padding: 2rem;
+    color: ghostwhite;
+    font-size: 7rem;
+    font-family: inherit;
+}
+
+.email {
+    width: 85%;
+    padding: 4rem;
+    border-bottom: .8rem solid white;
+}
+
+.email:focus {
+    border-bottom-color: dodgerblue;
+}
+
+.Uname, .password {
+    padding: 3rem;
+}
+
+
+.stuff {
+    position: relative;
+    font-size: 30rem;
+    top: 100px;
+    left: 100px;
+    --slide-direction: 1;
+}
+
+.active > .stuff {
+    animation: from-out-screen 2s ease-in-out;
+}
+

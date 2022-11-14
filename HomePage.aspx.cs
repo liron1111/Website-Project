@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,18 +12,18 @@ namespace WebsiteProject
         public string msg;
 
         protected void Page_Load(object sender, EventArgs e) {
-            
+
             DataManagement();
-        
+
         }
 
         void DataManagement() {
 
             if (Request.Form["submit"] != null) {
 
-                Tuple<string, string> userData = FetchData();
-                
-                if (CheckData(userData)) {
+                string userData = CollectUserData();
+
+                if (CheckUserData(userData)) {
                     msg = "valid user data";
                 } else {
                     msg = "invalid user data";
@@ -31,24 +31,21 @@ namespace WebsiteProject
             }
         }
 
-        public Tuple<string ,string> FetchData() {
+        public string CollectUserData() {
 
             string username, password;
 
+            // user data
             username = Request.Form["username"];
             password = Request.Form["password"];
 
-            return new Tuple<string, string>(username, password);
+            return username;
         }
 
-        bool CheckData(Tuple<string, string> data) {
-
-            string username = data.Item1;
-            string password = data.Item2;
-
-            bool isDataValid = username.Contains("liron") && password.Contains("123");
-
-            return isDataValid;
-        } 
+        bool CheckUserData(string username) {
+            bool userDataValid = username.Contains("liron");
+            
+            return userDataValid;
+        }
     }
 }

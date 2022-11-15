@@ -1,7 +1,11 @@
-﻿// elements
-const loginWindow = document.getElementById("login-window");
-const sections = document.getElementsByTagName("section");
-const ghost = document.getElementById("ghost");
+﻿const windowHeight = window.innerHeight;  // window height
+
+// elements
+const body = document.querySelector("body");  // body
+const sections = document.getElementsByTagName("section");  // sections
+const loginWindow = document.getElementById("login-window");  // login window 
+const ghost = document.getElementById("ghost");  // ghost follower
+const slideElements = document.getElementsByClassName("slide");  // slide elements
 
 // open login window 
 function OpenLoginWindow() {
@@ -10,9 +14,11 @@ function OpenLoginWindow() {
     loginWindow.style.display = "block";
 
     // section brightness to .2
-    sections.forEach(function (section) {
-        section.style.filter = "brightness(.2)";
-    });
+    for (let i = 0; i < sections.length; i++) {
+        sections[i].style.filter = "brightness(.2)";
+        sections[i].style.pointerEvents = "none";
+        body.style.overflowY = "hidden";
+    }
 }
 
 // close login window
@@ -22,9 +28,11 @@ function CloseLoginWindow() {
     loginWindow.style.display = "none";
 
     // section brightness back to 1
-    sections.forEach(function (section) {
-        section.style.filter = "brightness(1)";
-    });
+    for (let i = 0; i < sections.length; i++) {
+        sections[i].style.filter = "brightness(1)";
+        sections[i].style.pointerEvents = "all";
+        body.style.overflowY = "scroll";
+    }
 }
 
 
@@ -43,6 +51,22 @@ const AnimateCursor = (e, cursor) => {
     });
 }
 
+// scroll
+function OnScrollReveal(revealElements) {
+
+    for (var i = 0; i < revealElements.length; i++) {
+        var elementTop = revealElements[i].getBoundingClientRect().top;
+
+        if (elementTop < windowHeight + 50) {
+            revealElements[i].classList.add("active");
+        } else {
+            revealElements[i].classList.remove("active");
+        }
+    }
+}
+
+
+// on mouse move
 window.onmousemove = e => {
 
     // login window is not displayed
@@ -51,23 +75,10 @@ window.onmousemove = e => {
     }
 }
 
+// on scroll
+window.addEventListener("scroll", function() {
 
-// scroll
-function OnScrollReveal() {
-    var reveals = document.getElementsByTagName("section");
-
-    for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;  // window height
-        console.log(windowHeight)
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 150;
-
-        if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
-        } else {
-            reveals[i].classList.remove("active");
-        }
-    }
-}
-
-window.addEventListener("scroll", OnScrollReveal);
+    // reveal sections
+    OnScrollReveal(slideElements);
+    
+});

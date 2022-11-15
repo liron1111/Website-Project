@@ -2,6 +2,9 @@
     overflow-x: hidden;
 }
 
+button:hover {
+    cursor: pointer;
+}
 
 /* text gradienct*/
 .text-gradient {
@@ -15,7 +18,7 @@
 /* animation allows element to come out of screen*/
 @keyframes from-out-screen {
     0% {
-        transform: translate(calc(100vw * calc(--slide-direction));
+        transform: translate(calc(100vw * var(--slide-direction)));
         opacity: 0;
     }
 

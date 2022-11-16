@@ -67,10 +67,10 @@ section > * {
         }
 
         .in-nav-group > button > .icon {
-        font-size: 11rem;
-        margin-right: 2rem;
-        color: inherit;
-    }
+            font-size: 11rem;
+            margin-right: 3rem;
+            color: inherit;
+        }
 
 
     /* home button */
@@ -104,6 +104,17 @@ section > * {
             background-color: mediumpurple;
             box-shadow: 0 0 1rem rgb(180, 180, 255);
         }
+
+    /* user icon */
+    #user-icon {
+        display: block;
+        border: 2px solid black;
+        border-radius: 100%;
+        background-size: cover;
+        width: 35rem;
+        aspect-ratio: 1;
+        font-weight: 700;
+    }
 
     /* --------- */
 
@@ -158,10 +169,65 @@ section > * {
         position: absolute;
         left: 0;
         top: 0;
-        color: white;
+        color: ghostwhite;
         font-size: 20rem;
         aspect-ratio: 1;
     }
 
 
 
+#login-window {
+    background-image: linear-gradient(to bottom, rgb(20, 20, 20) 10%, rgb(40, 40, 40) 75%);
+    border-radius: 5rem;
+    display: none;
+    position: absolute;
+    width: 200rem;
+    aspect-ratio: 0.8;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    padding: 10rem;
+}
+    
+    
+    #login-window > * {
+        display: inherit;
+    }
+    
+    #login-window > h1 {
+        color: white;
+        font-size: 20rem;
+    }
+
+    #login-window > form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 50%;
+    }
+
+    input {
+        display: block;
+        border: none;
+        border-bottom: 2px solid blue;
+        outline: none;
+        background-color: rgb(100, 100, 100);
+    }
+
+    label {
+        font-size: 9rem;
+        color: rgb(200, 200, 200);
+        font-family: inherit;
+    }
+
+    #escape-login-window {
+        border: 1px solid white;
+        border-radius: 5rem;
+        background: none;
+        font-family: inherit;
+        font-size: 8rem;
+        color: ghostwhite;
+        padding: 3rem;
+        float: right;
+    }

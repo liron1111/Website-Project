@@ -24,14 +24,17 @@
                 <button id="courses-button"><span class="icon" id="courses-icon"><i class="fa-duotone fa-backpack"></i></span> courses</button>
             </div>
 
-            <button id="login-button" onclick="OpenLoginWindow()">login</button>
+           
+            <div> 
+                <%=userOutput %>
+            </div>
 
         </nav>
 
         <article>
 
             <h1>learn to code <br/><span class="text-gradient">better.</span></h1>
-            <h3> LearningFire is a <span class="text-gradient">very-friendly</span> && <span class="text-gradient">highly-amusing</span> way <br/> to level up your programming skills.</h3>
+            <h3>LearningFire is a <span class="text-gradient">very-friendly</span> && <span class="text-gradient">highly-amusing</span> way <br/> to level up your programming skills.</h3>
         
         </article>
 
@@ -41,7 +44,29 @@
   
     </section>
     
-    <div id="login-window"></div>
+    <div id="login-window">
+            
+        <button id="escape-login-window" onclick="CloseLoginWindow()">esc</button>
+
+        <h1>Login</h1>
+            
+            <form id="login_form" runat="server">
+
+                <div>
+                    <label>Username</label>
+                    <input name="username"/>
+                </div>
+                
+                <div>
+                    <label>Password</label>
+                    <input id="password" name="password"/>
+                </div>
+
+                <input type="submit" name="submit" value="submit"/>
+
+            </form>
+
+        </div>
 
     <div id="ghost"><i class="fa-solid fa-ghost"></i></div>
 

@@ -1,15 +1,9 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Fredoka&display=swap');
-
-
-html {
+﻿html {
     font-size: .3vmin;
 }
 
 body {
     background: black;
-    margin: 0;
-    font-family: 'Fredoka';
-    scroll-behavior: smooth;
 }
 
 
@@ -50,7 +44,7 @@ section > * {
         
     }
 
-        .in-nav-group > button {
+        .in-nav-group > a > button {
             margin: 0 15rem;
             background: none;
             border: none;
@@ -61,12 +55,12 @@ section > * {
             transition: .3s;
         }
 
-        .in-nav-group > button:hover {
+        .in-nav-group > a > button:hover {
             color: white;
             text-shadow: 0 0 .8rem white;
         }
 
-        .in-nav-group > button > .icon {
+        .in-nav-group > a > button > .icon {
             font-size: 11rem;
             margin-right: 3rem;
             color: inherit;

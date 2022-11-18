@@ -5,8 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>LearningFire</title>
-    <link rel="stylesheet" href="MainStyleSheet.css" append-version="true"/>
-    <link rel="stylesheet" href="HomePageStyleSheet.css" append-version="true"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="MainStyleSheet.css" /> 
+    <link rel="stylesheet" type="text/css" media="screen" href="HomePageStyleSheet.css" /> 
     <script src="https://kit.fontawesome.com/944eb371a4.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
 </head>
@@ -20,8 +20,12 @@
             </a>
 
             <div class="in-nav-group"> 
-                <button id="projects-button"><span class="icon" id="projects-icon"><i class="fa-duotone fa-file-chart-column"></i></span> projects</button>
-                <button id="courses-button"><span class="icon" id="courses-icon"><i class="fa-duotone fa-backpack"></i></span> courses</button>
+                <a href="#">
+                    <button id="projects-button"><span class="icon" id="projects-icon"><i class="fa-duotone fa-file-chart-column"></i></span>projects</button>
+                </a>
+                <a href="CoursesPage.aspx">
+                    <button id="courses-button"><span class="icon" id="courses-icon"><i class="fa-duotone fa-backpack"></i></span>courses</button>
+                </a>
             </div>
 
            

@@ -1,4 +1,9 @@
-﻿body {
+﻿@import url('https://fonts.googleapis.com/css?family=Fredoka&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Fredoka';
+    scroll-behavior: smooth;
     overflow-x: hidden;
 }
 

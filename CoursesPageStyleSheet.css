@@ -1,0 +1,120 @@
+﻿body {background-color: black}
+
+#courses-section {
+}
+
+
+:root {
+    --card-width: 220px;
+    --card-bg: rgb(35, 35, 35);
+
+    --hr-width: 100px;
+}
+
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--card-width));
+    grid-gap: 20px;
+    align-items: stretch;
+    width: 90%;
+    padding: 10px;
+}
+
+
+.card {
+    border-radius: 10px;
+    background-color: var(--card-bg);
+    width: var(--card-width);
+    aspect-ratio: 5 / 7;
+    transition: transform .5s;
+}
+
+.card:hover {
+    cursor: default;
+    transform: translateY(-5px) scale(1.05);
+}
+
+
+.card > img {
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+    width: 100%;
+}
+
+
+.card-content {
+    margin: 0 10px;
+    padding: 0 10px;
+}
+
+.card-content > h1 {
+    color: #d5d3d3;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.card-content > p {
+    color: #999999;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+footer {
+    padding: 10px 0;
+    margin: 0 12px;
+}
+
+.card-chips {
+}
+
+.card-chips > span {
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 5px 10px;
+    margin: 3px 2px;
+}
+
+
+.python-chip {
+    background-color: red;
+    color: whitesmoke;
+
+}
+
+
+
+hr {
+    border: none;
+    border-radius: 15px;
+    position: relative;
+    width: var(--hr-width);
+    height: 10px;
+    background-color: rgb(50, 50, 50);
+}
+
+    hr::before {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 10px;
+        width: 15px;
+        height: 100%;
+        top: 0;
+        left: -10%;
+        background-color: white;
+        box-shadow: 0 2px 4px 4px #8b7f7f;
+        animation: hr-animation 2s alternate infinite;
+    }
+
+
+@keyframes hr-animation {
+
+    to {
+        transform: translateX(var(--hr-width));
+    }
+
+}

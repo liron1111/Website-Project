@@ -1,0 +1,124 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Fredoka&display=swap');
+
+html {
+    font-size: .3vmin
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka';
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* text gradienct*/
+.text-gradient {
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* animation allows element to come out of screen*/
+@keyframes from-out-screen {
+    0% {
+        transform: translate(calc(100vw * var(--slide-direction)));
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+
+/* navbar */
+nav {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    height: 15%;
+    margin: 0 2.5%;
+    width: 95%;
+}
+
+
+/* a group in navbar (mainly for buttons)*/
+.in-nav-group {
+}
+
+    .in-nav-group > a > button {
+        margin: 0 15rem;
+        background: none;
+        border: none;
+        color: silver;
+        font-family: inherit;
+        font-size: 10rem;
+        font-weight: 900;
+        transition: .3s;
+    }
+
+        .in-nav-group > a > button:hover {
+            color: white;
+            text-shadow: 0 0 .8rem white;
+        }
+
+        .in-nav-group > a > button > .icon {
+            font-size: 11rem;
+            margin-right: 3rem;
+            color: inherit;
+        }
+
+
+/* home button */
+.home-button {
+    background: none;
+    border: none;
+    color: lightgrey;
+    font-size: 25rem;
+    transition: color .1s;
+}
+
+    .home-button:hover {
+        color: azure;
+    }
+
+
+/* login button */
+.login-button {
+    border: none;
+    background-color: white;
+    padding: 10rem;
+    font-size: 10rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 1rem 1rem 1rem rgb(10, 10, 10);
+    transition: background .2s, color .1s;
+}
+
+    .login-button:hover {
+        color: white;
+        background-color: mediumpurple;
+        box-shadow: 0 0 1rem rgb(180, 180, 255);
+    }
+
+
+
+/* grid */
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--elem-width));
+    align-items: stretch;
+    grid-gap: 100px 50px;
+    width: 90%;
+    padding: 25px;
+}

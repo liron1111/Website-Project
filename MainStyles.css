@@ -1,7 +1,8 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Fredoka&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:900');
 
 html {
-    font-size: .3vmin
+    font-size: .3vmin;
 }
 
 body {
@@ -116,6 +117,7 @@ nav {
 /* grid */
 .grid-wrapper {
     display: grid;
+    position: relative;
     grid-template-columns: repeat(auto-fill, var(--elem-width));
     align-items: stretch;
     grid-gap: 100px 50px;

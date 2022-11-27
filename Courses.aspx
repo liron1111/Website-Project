@@ -38,12 +38,10 @@
     <section class="grid-wrapper">
 
         <article class="course-card"></article>
-                <article class="course-card"></article>
         <article class="course-card"></article>
-                <article class="course-card"></article>
         <article class="course-card"></article>
-
-
+        <article class="course-card"></article>
+        <article class="course-card"></article>
 
     </section>
 

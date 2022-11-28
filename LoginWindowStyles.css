@@ -1,0 +1,240 @@
+﻿:root {
+    --purp-clr: rgb(58, 45, 82);
+    --yellow-clr: #f4c531;
+}
+
+#login-window {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 225px;
+    transition: opacity .5s;
+}
+
+    #login-window.hidden {
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    #login-window.shown {
+        pointer-events: all;
+        opacity: 1;
+    }
+
+
+form {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 25px;
+    height: 100%;
+}
+
+label {
+    display: block;
+    color: var(--purp-clr);
+    padding: 25px 0 10px 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+input:not([type="submit"]) {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 15px;
+    color: black;
+    outline: none;
+    border: none;
+    border-bottom: 1.75px solid black;
+}
+
+input[type="submit"] {
+    border: none;
+    background-color: var(--yellow-clr);
+    border-radius: 20px;
+    padding: 16px 0;
+    margin-top: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: inherit;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+
+.panda {
+    position: relative;
+}
+
+
+.hands {
+    display: flex;
+    position: absolute;
+    gap: 120px;
+    width: 100%;
+    bottom: -22px;
+    justify-content: space-around;
+}
+
+.hand {
+    background-color: var(--purp-clr);
+    border: 1.5px solid black;
+    border-radius: 10px 10px 25px 25px;
+    height: 32px;
+    width: 32px;
+}
+
+
+.face {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.head {
+    border: 2px solid var(--purp-clr);
+    border-radius: 120px 120px 90px 90px;
+    background-color: white;
+    height: 118px;
+    width: 134px;
+}
+
+
+.eyes {
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    top: 35px;
+}
+
+.eye {
+    background-color: var(--purp-clr);
+    height: 35px;
+    width: 30px;
+    border-radius: 30px;
+}
+
+    .eye.left {
+        transform: rotate(-20deg);
+    }
+
+    .eye.right {
+        transform: rotate(20deg);
+    }
+
+
+    .eye:before {
+        content: "";
+        position: absolute;
+        background-color: #ff8bb1;
+        height: 15px;
+        width: 22px;
+        border-radius: 100%;
+    }
+
+    .eye.left:before {
+        top: 25px;
+        left: -10px;
+        transform: rotate(45deg);
+    }
+
+    .eye.right:before {
+        top: 25px;
+        right: -10px;
+        transform: rotate(-45deg);
+    }
+
+
+    .eye:after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background-color: white;
+    }
+
+    .eye.left:after {
+        left: 35%;
+        top: 55%;
+    }
+
+    .eye.right:after {
+        right: 35%;
+        top: 55%;
+    }
+
+
+.ears {
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    width: 100%;
+    gap: 50px;
+    top: 2%;
+}
+
+.ear {
+    background-color: var(--purp-clr);
+    height: 45px;
+    width: 32px;
+    border-radius: 40px 40px 0 0;
+    z-index: -1;
+}
+
+    .ear.left {
+        transform: rotate(-38deg);
+    }
+
+    .ear.right {
+        transform: rotate(38deg);
+    }
+
+
+
+.nose-mouth {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nose {
+    background-color: var(--purp-clr);
+    width: 16px;
+    height: 16px;
+    border-radius: 20px 0 0 4px;
+    transform: rotate(45deg);
+}
+
+    .nose:after {
+        content: "";
+        position: absolute;
+        background-color: var(--purp-clr);
+        height: 9.5px;
+        width: 1.5px;
+        transform: rotate(-45deg);
+        top: 12px;
+        left: 16px;
+    }
+
+
+.mouth, .mouth-double {
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 0 0.2em var(--purp-clr);
+    height: 12px;
+    width: 16px;
+}
+
+.mouth {
+    left: 50%;
+}
+
+.mouth-double {
+    content: "";
+    left: -50%;
+}

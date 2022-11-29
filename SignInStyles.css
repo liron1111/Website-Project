@@ -1,0 +1,115 @@
+﻿body {
+    background-color: rgb(255, 151, 186);
+}
+
+#login-window {
+    top: 10% !important;
+}
+
+.form-field {
+    padding: 25px 0px;
+}
+
+
+.outer_wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    max-width: 2000px;
+    max-height: 1000px;
+    z-index: -9999;
+}
+
+.panda_wrapper {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    transition: 2s;
+}
+
+    .panda_wrapper svg {
+        fill: rgb(173, 1, 87);
+        display: block;
+    }
+
+    .panda_wrapper.stop {
+        transition: 0 !important;
+    }
+
+.panda_inner_wrapper {
+    height: 100%;
+    width: 100%;
+    transition: 0;
+}
+
+.facing_upleft,
+.facing_left,
+.facing_downleft {
+    transform: scale(-1, 1);
+}
+
+.panda_sprite {
+    position: absolute;
+    height: 500px;
+    width: calc(13 * 100px);
+    pointer-events: none;
+}
+
+    .panda_sprite img {
+        height: 100px;
+        width: 100%;
+        display: block;
+    }
+
+.hit_wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.hit_area {
+    height: 50px;
+    width: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.panda_wrapper.stop .hit_area {
+    margin-top: 10px;
+    height: 40px;
+}
+
+/* need to flip because the parent divs are flipped */
+.facing_upleft .hit_area,
+.facing_left .hit_area,
+.facing_downleft .hit_area {
+    transform: scale(-1, 1);
+}
+
+.hit_corner {
+    height: 50%;
+    width: 50%;
+    opacity: 0.1;
+}
+
+.sign {
+    position: absolute;
+    color: white;
+    font-family: inherit;
+    font-size: 10px;
+    left: 95%;
+    top: 95%;
+}

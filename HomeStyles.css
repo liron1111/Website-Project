@@ -65,3 +65,6 @@ section {
     aspect-ratio: 1;
 }
 
+.form-field {
+    padding: 20px 0px;
+}

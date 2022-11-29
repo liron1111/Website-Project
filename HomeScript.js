@@ -1,8 +1,23 @@
 ﻿// elements
 const body = document.querySelector("body");  // body
+const loginWindow = document.getElementById("login-window");  // login window
 const sections = document.getElementsByTagName("section");  // sections
 const ghost = document.getElementById("ghost");  // ghost follower
 
+
+function ShowLoginWindow() {
+
+    loginWindow.classList.remove("hidden");
+    loginWindow.classList.add("shown");
+
+}
+
+function CloseLoginWindow() {
+
+    loginWindow.classList.add("hidden");
+    loginWindow.classList.remove("shown");
+
+}
 
 // animate cursor
 const AnimateCursor = (e, cursor) => {

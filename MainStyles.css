@@ -1,8 +1,10 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Fredoka&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:900');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
 html {
     font-size: .3vmin;
+    cursor: default;
 }
 
 body {
@@ -14,8 +16,18 @@ body {
     background-color: black;
 }
 
-button:hover {
+section.hidden {
+    pointer-events: none;
+    filter: brightness(10%);
+}
+
+button:hover, a:hover {
     cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* text gradienct*/

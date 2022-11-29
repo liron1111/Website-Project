@@ -1,15 +1,14 @@
 ﻿:root {
     --purp-clr: rgb(58, 45, 82);
-    --yellow-clr: #f4c531;
 }
 
 #login-window {
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 25%;
+    transform: translateX(-50%);
     width: 350px;
-    height: 225px;
+    height: 200px;
     transition: opacity .5s;
 }
 
@@ -28,39 +27,80 @@ form {
     background-color: white;
     border-radius: 10px;
     padding: 15px 25px;
-    height: 100%;
 }
 
-label {
-    display: block;
-    color: var(--purp-clr);
-    padding: 25px 0 10px 0;
-    font-weight: bold;
+h1 {
+    font-size: 32px;
+    font-family: "Fredoka";
+}
+
+footer {
+    font-size: 12px;
+    font-family: "Alegreya" sans-serif;
+    text-align: center;
+    margin-top: 15px;
+    color: grey;
+}
+
+
+
+.form-field {
+    position: relative;
+    padding: 20px 0px;
+}
+
+input {
+    position: relative;
+    border: none;
+    border-bottom: 2px solid #D1D1D4;
+    background: none;
+    padding: 10px;
+    padding-left: 26px;
+    font-weight: 700;
+    width: 60%;
+    font-family: Raleway, sans-serif;
+    transition: .2s;
+}
+
+    input:active,
+    input:focus,
+    input:hover {
+        outline: none;
+        border-bottom-color: #6A679E;
+    }
+    
+    input[type="email"] {
+        width: 80%;
+    }
+
+    input[type="submit"] {
+        font-size: 14px;
+        margin-top: 30px;
+        padding: 16px 20px;
+        border-radius: 26px;
+        border: 2px solid #B5B5C4;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+        width: 100%;
+        color: #4C489D;
+        cursor: pointer;
+    }
+
+        input[type="submit"]:active,
+        input[type="submit"]:focus,
+        input[type="submit"]:hover {
+            border-color: #6A679E;
+            outline: none;
+        }
+
+.input-icon {
+    position: absolute;
+    top: 25px;
+    color: #6A65C2;
     font-size: 16px;
 }
 
-input:not([type="submit"]) {
-    font-family: inherit;
-    font-weight: 400;
-    font-size: 15px;
-    color: black;
-    outline: none;
-    border: none;
-    border-bottom: 1.75px solid black;
-}
-
-input[type="submit"] {
-    border: none;
-    background-color: var(--yellow-clr);
-    border-radius: 20px;
-    padding: 16px 0;
-    margin-top: 24px;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: inherit;
-    letter-spacing: 1px;
-    width: 100%;
-}
 
 
 .panda {
@@ -225,7 +265,7 @@ input[type="submit"] {
     position: absolute;
     background-color: transparent;
     border-radius: 50%;
-    box-shadow: 0 0.2em var(--purp-clr);
+    box-shadow: 0 2px var(--purp-clr);
     height: 12px;
     width: 16px;
 }
